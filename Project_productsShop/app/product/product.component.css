@@ -1,0 +1,15 @@
+.product{
+    border-style: dotted;
+}
+td{
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 1px;
+}
+table{
+    border-color:blueviolet;
+    margin: 10px;
+}
+.promo{
+    background-color: red;
+}

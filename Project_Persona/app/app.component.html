@@ -1,0 +1,18 @@
+<h1>Utworzona strona {{title}}, V.{{version.toFixed(1)}}</h1>
+<button (click)="onNewVersion()"> Podnies wersje </button>
+<button (click)="onNewPatch()"> Wprowadz nowy patch </button>
+
+<div *ngIf="wybranaOsoba != null "> 
+      Wybrano: {{wybranaOsoba.imie}}
+
+</div>
+
+<app-osoba [osobaComponentPobierz]="osoba1" (emiterOsob)="onWybierz($event)" [czyWybrana] = "wybranaOsoba == osoba1"></app-osoba>
+<app-osoba [osobaComponentPobierz]="osoba2" (emiterOsob)="onWybierz($event)" [czyWybrana] = "wybranaOsoba == osoba2"></app-osoba>
+<app-osoba [osobaComponentPobierz]="osoba1" (emiterOsob)="onWybierz($event)" [czyWybrana] = "wybranaOsoba == osoba1"></app-osoba>
+<app-osoba [osobaComponentPobierz]="osoba2" (emiterOsob)="onWybierz($event)" [czyWybrana] = "wybranaOsoba == osoba2"></app-osoba>
+
+
+
+    
+      <router-outlet></router-outlet>

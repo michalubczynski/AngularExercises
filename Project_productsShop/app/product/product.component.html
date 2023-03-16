@@ -1,0 +1,49 @@
+<table style="border-collapse: collapse;" *ngIf="ukryte; else ukryj">
+    <tr>
+        <td>NAZWA</td>
+        <td>Cena</td>
+        <td>Data</td>
+        <td>Dodaj do koszyka</td>
+    </tr>
+    <tr *ngIf="product != undefined " [ngClass]="{promo : product.czyPromocja}"> 
+            <td>    
+                {{product.nazwa}} 
+            </td>
+            <td>
+                {{product.cena}} 
+            </td>
+            <td>
+                {{product.dataUtworzenia}} 
+            </td>
+            <td>
+                {{liczbaSztukWKoszyku}} 
+            </td>
+
+            <td>
+                <button (click)="onDodajDoKosza()">Dodaj do kosza</button>
+            </td>
+            <td>
+                <button (click)="ukryjPokaz()">{{zwinRozwinButton}}</button>
+            </td>
+    </tr>
+    
+
+</table>
+<ng-template #ukryj>
+    <table>
+    <tr>
+        <td>NAZWA</td>
+    </tr>
+    <tr *ngIf="product != undefined " [ngClass]="{promo : product.czyPromocja}"> 
+            <td>    
+                {{product.nazwa}} 
+            </td>
+            <td>
+                <button (click)="ukryjPokaz()">{{zwinRozwinButton}}</button>
+            </td>
+    </tr>
+    
+
+</table>
+</ng-template>
+

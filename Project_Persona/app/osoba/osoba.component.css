@@ -1,0 +1,15 @@
+p{
+    font-size: large;
+}
+.osoba{
+    margin: 1%;
+    padding: 1%;
+    border: 2px;
+    border-style: dotted;
+}
+.osoba.wybrana{
+    margin: 0.5%;
+    padding: 1%;
+    border: 2px;
+    border-style: dotted red;
+}

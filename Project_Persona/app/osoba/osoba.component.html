@@ -1,0 +1,10 @@
+<div *ngIf="osoba !== undefined " class="osoba" [ngClass]=" {'wybrana' : czyWybrana}">
+    <div>
+
+        <span>
+        {{osoba.imie}} {{osoba.nazwisko}}<br>{{osoba.miasto}}
+        </span><br>
+        <button (click)="onWybierz()">Wybierz</button>
+    </div>
+
+</div>

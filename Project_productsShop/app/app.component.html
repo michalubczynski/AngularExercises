@@ -1,0 +1,17 @@
+<app-naglowek></app-naglowek>
+<div [ngStyle]="{ 'display': ukryte ? 'none' : 'block' }" >
+<app-product [product]="product1" (wyslijDoKosza)="PrzeslijCeneDoKosza($event)" ></app-product>
+<app-product [product]="product2" (wyslijDoKosza)="PrzeslijCeneDoKosza($event)"></app-product>
+<app-product [product]="product3" (wyslijDoKosza)="PrzeslijCeneDoKosza($event)"></app-product>
+<app-product [product]="product4" (wyslijDoKosza)="PrzeslijCeneDoKosza($event)"></app-product>
+<app-product [product]="product5" (wyslijDoKosza)="PrzeslijCeneDoKosza($event)"></app-product>
+</div>
+<button (click)="ukryjPokaz()">{{przyciskKomunikat}}</button>
+
+<app-koszyk [dodanawartosc]="stanKoszyka"></app-koszyk>
+=
+<button>X</button>
+
+
+
+<router-outlet></router-outlet>
