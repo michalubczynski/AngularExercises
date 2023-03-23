@@ -1,0 +1,20 @@
+<div *ngIf="wybranaOsoba != undefined">
+    {{getWybranaOsoba()}}
+</div>
+<table>
+    <thead>
+        <th>Lp.</th>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Data Urodzenia</th>
+        <th>Wzrost</th>
+    </thead>
+    <tbody >
+        <tr *ngFor="let osoba of osoby; let i = index" [app-osoba]="osoba" [lp]="i+1" appWytluszczenie></tr>
+    </tbody>
+</table>
+
+
+
+
+<router-outlet></router-outlet>

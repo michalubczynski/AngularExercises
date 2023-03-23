@@ -1,0 +1,21 @@
+<td >
+    {{pobierzLp()}}
+</td>
+<td >
+    {{osoba?.imie}}
+</td>
+<td >
+    {{osoba?.nazwisko}}
+</td>
+<td >
+    {{osoba?.dataUrodzenia}}
+</td>
+<td [ngSwitch]="osoba?.wzrost">
+    <span *ngSwitchCase="wzrost.niski">╭v╮</span>
+    <span *ngSwitchCase="wzrost.sredni">╭-╮</span>
+    <span *ngSwitchCase="wzrost.wysoki">╭ᑎ╮</span>
+    <span *ngSwitchCase="undefined">╭X╮</span>
+</td>
+<td>
+    <button (click)="onWybrano()">Wybierz</button>
+</td>
