@@ -1,0 +1,7 @@
+form{
+    margin: 20px;
+}
+form *{
+    margin-inline: 10px;
+
+}

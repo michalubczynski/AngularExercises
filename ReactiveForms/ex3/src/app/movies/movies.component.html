@@ -1,0 +1,25 @@
+<a routerLink="new">Dodaj nowy film</a>
+ <table>
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Nazwa</th>
+            <th>Rok wydania</th>
+            <th>Kategoria</th>
+            <th>Opcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of movies">
+            <td>{{item.id+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.releaseYear}}</td>
+            <td>{{item.categoryAsString}}</td>
+            <td>
+                <button (click)="onUsun(item.id)">Usun</button>
+                <button [routerLink]="['/movies', item.id]">Edytuj</button>
+            </td>
+
+        </tr>
+    </tbody>
+ </table>

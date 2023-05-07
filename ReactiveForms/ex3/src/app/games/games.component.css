@@ -1,0 +1,15 @@
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+td{
+    border-style: solid;
+    border-color: darkred;
+    border-style: solid;
+}
+thead{
+    font-weight: bold;
+    text-decoration:underline;
+    font-size: larger;
+}

@@ -1,0 +1,22 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+    <div>
+        <label for="Nazwa">Nazwa</label>
+        <input type="text" name="name" id="name" formControlName="name"/>
+    </div>
+    <div>
+        <label for="Rok">Rok</label>
+        <input type="number" formControlName="releaseYear"/>
+    </div>
+    <div>
+        <label for="Category">Kategoria Filmu</label>
+        <select name="category" id="category" formControlName="category">
+            <option [value]="categoryEnum.Fantasy" selected>Fantasy</option>
+            <option [value]="categoryEnum.Horror">Horror</option>
+            <option [value]="categoryEnum.Thriller">Thriller</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" (click)="onCancel()" value="Anuluj" />
+        <input type="submit" value="Zatwierdź" [disabled]="form.invalid || !form.dirty" />
+    </div>
+</form>

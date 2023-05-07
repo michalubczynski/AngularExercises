@@ -1,0 +1,22 @@
+<form  *ngIf="movie != undefined" (submit)="onSubmit()">
+    <div>
+      <label>Nazwa</label>
+      <input type="text" [(ngModel)]="movie.name" name="name">
+    </div>
+    <div>
+      <label>Rok</label>
+      <input type="number" [(ngModel)]="movie.releaseYear" name="releaseYear">
+    </div>
+    <div>
+      <label>Kategoria Filmu</label>
+      <select [(ngModel)]="movie.category" name="category">
+        <option [value]="categoryEnum.Fantasy">Fantasy</option>
+        <option [value]="categoryEnum.Horror">Horror</option>
+        <option [value]="categoryEnum.Thriller">Thriller</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit">Zapisz</button>
+      <button type="button" (click)="onCancel()">Anuluj</button>
+    </div>
+  </form>

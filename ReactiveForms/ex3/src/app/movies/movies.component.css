@@ -1,0 +1,28 @@
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px;
+}
+td{
+    border-style: solid;
+    border-color:darkcyan;
+    border-style: solid;
+    
+}
+th{
+    border-style: solid;
+    border-color:darkcyan;
+    border-style: solid;
+    
+}
+tr{
+    border-style: solid;
+    border-color:darkcyan;
+    border-style: solid;
+}
+thead{
+    font-weight: bold;
+    text-decoration:underline;
+    font-size: larger;
+}
