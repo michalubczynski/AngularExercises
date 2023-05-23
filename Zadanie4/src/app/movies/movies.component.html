@@ -1,0 +1,35 @@
+<form>
+    <label for="filtr">filtr</label>
+    <input name="_title" value="Test" [(ngModel)]="_title"/>
+    <button (click)="onSzukaj()" type="button">Szukaj</button>
+</form>
+
+
+<a routerLink="add">Add new</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <td>{{movie.id}}</td>
+            <td>{{movie.title}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{movie.category}}</td>
+            <td>
+                <a [routerLink]="movie.id + '/edit'">Edit</a>
+            </td>
+            <td>
+                <button (click)="onDeleteClick(movie)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
